@@ -2,12 +2,6 @@ import express from "express";
 
 const app = express();
 
-// app.get("/", (req, res) => {
-//   res.send("Server is empty");
-// });
-
-// list of 5 jokes Or Making Jokes API/JSON responce
-
 app.get("/api/jokes", (req, res) => {
   const jokes = [
     {
