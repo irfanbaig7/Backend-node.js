@@ -1,0 +1,15 @@
+{
+  "name": "04_youtubeprj",
+  "version": "1.0.0",
+  "description": "YT backend",
+  "license": "ISC",
+  "author": "irfan baig",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
