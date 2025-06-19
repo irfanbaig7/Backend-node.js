@@ -1,0 +1,19 @@
+** install packages **
+- npm i mongoose express dotenv
+
+** mongoose **
+- most important bcz yahi hai wo jo Database se connect karega, kaise se ?
+- mongoose.connect(url). 
+
+** DataBase se baat Karte samay problem aa sakti hai isliye **
+- Try/catch me warp karo
+
+** DATAbase se jab bhi baat karoge time lagta hai to kay kare ?  
+- async/await lagana hi padega
+
+** what is process in node ?
+- Jo current running application's refrencese.    
+- ex. process.exit(1)
+
+** .env me change?
+- to manule hi restart karan padega Nodemon kuch nhi karega.
