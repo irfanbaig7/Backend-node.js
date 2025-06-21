@@ -17,3 +17,12 @@
 
 ** .env me change?
 - to manule hi restart karan padega Nodemon kuch nhi karega.
+
+** dotenv.config() ka kaam kya hai?
+- .env file me jo secret values likhi hoti hain (jaise PORT, MONGODB_URI)
+unhe Node.js me use karne ke liye load karta hai.
+
+** path: "./env" kyun likhte hain? 
+** installition 
+-cookie-parser: 
+-cors
