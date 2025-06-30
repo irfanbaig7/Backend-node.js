@@ -1,7 +1,7 @@
 import { asyncHandler } from "../util/asyncHandler.js"
 import { User } from "../models/user.model.js"
 import { uploadOnCloudinary } from "../util/cloudinary.js"
-import { apiError } from "../util/apiError"
+import { apiError } from "../util/apiError.js"
 import { apiResponse } from "../util/apiResponce.js"
 
 const registerUser = asyncHandler( async (req, res) => {
@@ -18,7 +18,7 @@ const registerUser = asyncHandler( async (req, res) => {
     if (
         [fullname, username, email, password].some((field) => field?.trim() === "")
     ) {
-        throw apiError(400, "All field are required")
+        throw new apiError(400, "All field are required")
     }
 
 
@@ -62,7 +62,7 @@ const registerUser = asyncHandler( async (req, res) => {
     const user = await User.create({
         fullname,
         avatar: avatar.url,
-        coverImage: coverIamge?.url || "",
+        coverImage: coverImage?.url || "",
         email,
         password,
         username: username.toLowerCase(),
