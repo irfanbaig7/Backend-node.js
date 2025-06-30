@@ -24,7 +24,7 @@ const registerUser = asyncHandler( async (req, res) => {
 
     // check if user already exist ? how can we check?
 
-    const existedUser = User.findOne({
+    const existedUser = await User.findOne({
         $or : [
             { username },
             { email },
@@ -62,7 +62,7 @@ const registerUser = asyncHandler( async (req, res) => {
     const user = await User.create({
         fullname,
         avatar: avatar.url,
-        coverImage: coveriamge?.url || "",
+        coverImage: coverIamge?.url || "",
         email,
         password,
         username: username.toLowerCase(),
